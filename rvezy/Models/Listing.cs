@@ -7,19 +7,19 @@ namespace rvezy.Models
 {
       public class Listing
     {
-        public int Id { get; set; }
-        public string ListingUrl { get; set; }
-        public string ScrapeId { get; set; }
-        public string LastScraped { get; set; }
-        public string Name { get; set; }
-        public string Summary { get; set; }
-        public string Space { get; set; }
-        public string Description { get; set; }
-        public string ExperiencesOffered { get; set; }
-        public string NeighborhoodOverview { get; set; }
-        public string Notes { get; set; }
-        public string Transit { get; set; }
-        public string ThumbnailUrl { get; set; }
+        public int id { get; set; }
+        public string listing_url { get; set; }
+        public string scrape_id { get; set; }
+        public string last_scraped { get; set; }
+        public string name { get; set; }
+        public string summary { get; set; }
+        public string space { get; set; }
+        public string description { get; set; }
+        public string experiences_offered { get; set; }
+        public string neighborhood_overview { get; set; }
+        public string notes { get; set; }
+        public string transit { get; set; }
+        public string thumbnail_url { get; set; }
         public string medium_url { get; set; }
         public string picture_url { get; set; }
         public string xl_picture_url { get; set; }
@@ -53,7 +53,7 @@ namespace rvezy.Models
         public string country { get; set; }
         public string latitude { get; set; }
         public string longitude { get; set; }
-        public Boolean is_location_exact { get; set; }
+        public string is_location_exact { get; set; }
         public string property_type { get; set; }
         public string room_type { get; set; }
         public string accommodates { get; set; }

@@ -33,6 +33,7 @@ namespace rvezy
 
             // Inject dependencies
 
+            services.TryAddScoped<ICsvProvider, CsvProvider>();
             services.TryAddScoped<IListingService, ListingService>();
         }
 
