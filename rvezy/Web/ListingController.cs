@@ -47,5 +47,35 @@ namespace rvezy.Web
 
             return items;
         }
+
+
+        [Route("")]
+        [HttpPost]
+        public async Task<Listing> AddListing(Listing model)
+        { 
+            await _listingService.AddListing(model);
+
+            return model;
+        }
+
+        [Route("")]
+        [HttpPut]
+        public async Task<Listing> EditListing(Listing model)
+        {
+            var updated = await _listingService.EditListing(model.id, model);
+
+            return updated;
+        }
+
+        [Route("")]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteListingById(int id)
+        {
+            var current = await _listingService.GetListingById(id).ConfigureAwait(false);
+            await _listingService.Delete(current);
+
+            return Ok();
+        }
+
     }
 }

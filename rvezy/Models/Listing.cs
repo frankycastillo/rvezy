@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,6 +8,7 @@ namespace rvezy.Models
 {
       public class Listing
     {
+        [Key]
         public int id { get; set; }
         public string listing_url { get; set; }
         public string scrape_id { get; set; }

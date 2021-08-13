@@ -155,7 +155,6 @@ E:\work\rvezy\rvezy\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Da
 E:\work\rvezy\rvezy\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 E:\work\rvezy\rvezy\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 E:\work\rvezy\rvezy\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.csproj.AssemblyReference.cache
 E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.GeneratedMSBuildEditorConfig.editorconfig
 E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.AssemblyInfoInputs.cache
 E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.AssemblyInfo.cs
@@ -184,3 +183,6 @@ E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.csproj.CopyComplete
 E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.dll
 E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.pdb
 E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.genruntimeconfig.cache
+E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.csproj.AssemblyReference.cache
+E:\work\rvezy\rvezy\bin\Debug\netcoreapp3.1\Humanizer.dll
+E:\work\rvezy\rvezy\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll

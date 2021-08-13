@@ -8,7 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using rvezy.Data;
 using rvezy.Services;
 
 namespace rvezy
@@ -32,6 +34,10 @@ namespace rvezy
             services.AddSwaggerGen();
 
             // Inject dependencies
+
+            services.AddDbContext<DataContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
 
             services.TryAddScoped<ICsvProvider, CsvProvider>();
             services.TryAddScoped<IListingService, ListingService>();

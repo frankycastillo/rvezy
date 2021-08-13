@@ -1,12 +1,14 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace rvezy.Models
 {
     public class Calendar
     {
-        public int ListingId { get; set; }
-        public DateTime Date { get; set; }
-        public bool Available { get; set; }
-        public Double Price { get; set; }
+        [Key]
+        public int listing_id { get; set; }
+        public DateTime date { get; set; }
+        public bool available { get; set; }
+        public Double price { get; set; }
     }
 }
