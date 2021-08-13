@@ -81,3 +81,7 @@ E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.csproj.CopyComplete
 E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.dll
 E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.pdb
 E:\work\rvezy\rvezy\obj\Debug\netcoreapp3.1\rvezy.genruntimeconfig.cache
+E:\work\rvezy\rvezy\bin\Debug\netcoreapp3.1\CsvHelper.dll
+E:\work\rvezy\rvezy\bin\Debug\netcoreapp3.1\Csv\calendar.csv
+E:\work\rvezy\rvezy\bin\Debug\netcoreapp3.1\Csv\listings.csv
+E:\work\rvezy\rvezy\bin\Debug\netcoreapp3.1\Csv\reviews.csv

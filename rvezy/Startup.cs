@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using rvezy.Services;
 
 namespace rvezy
 {
@@ -24,9 +26,14 @@ namespace rvezy
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddMvc();
 
             services.AddControllers();
             services.AddSwaggerGen();
+
+            // Inject dependencies
+
+            services.TryAddScoped<IListingService, ListingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +53,7 @@ namespace rvezy
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "rvezy API V1");

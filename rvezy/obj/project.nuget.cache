@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "k35lPKvXMAFsJQIVYinswXIHHFePd0SXWIsmHupCbpMgGGiTQq9LwqqktIUjWb+++TnSe1MVQqpJD0jsLlxXkg==",
+  "dgSpecHash": "AgKw1KRzFbnoCe5KAEY4cMyN0Ji21sdvcaJUcKbpeFf/17QRydfp0OXgB60DU7jChBXyEGS2PvWd2iUI7ACxNg==",
   "success": true,
   "projectFilePath": "E:\\work\\rvezy\\rvezy\\rvezy.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\frank\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\frank\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
+    "C:\\Users\\frank\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\frank\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\frank\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
     "C:\\Users\\frank\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.9\\microsoft.entityframeworkcore.5.0.9.nupkg.sha512",
