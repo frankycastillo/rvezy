@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -8,7 +7,7 @@ using rvezy.Models;
 
 namespace rvezy.Data
 {
-    public interface IRepository<T> : IDisposable where T : class
+    public interface IRepository<T> : IDisposable where T : IBaseModel
     {
         #region Database
 
@@ -50,7 +49,7 @@ namespace rvezy.Data
 
         Task<ICollection<T>> GetAllDescending<TKey>(Expression<Func<T, TKey>> orderBy, IPaginator paginator, bool useCache = false);
 
-        Task<T> Get(int? id, bool useCache = false);
+        Task<T> Get(Guid id, bool useCache = false);
 
         Task<T> Get(Expression<Func<T, bool>> match, bool useCache = false);
 
@@ -60,7 +59,7 @@ namespace rvezy.Data
 
         Task<T> Update(T entity, object values, bool useCache = false);
 
-        Task<T> Update(int id, object values, bool useCache = false);
+        Task<T> Update(Guid id, object values, bool useCache = false);
 
         Task DeleteAll();
 

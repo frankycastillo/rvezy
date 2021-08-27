@@ -1,13 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using rvezy.Data;
@@ -17,30 +13,38 @@ namespace rvezy
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostEnvironment environment)
         {
             Configuration = configuration;
+            Environment = environment;
         }
 
         public IConfiguration Configuration { get; }
+        private IHostEnvironment Environment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<KestrelServerOptions>(options =>
+            {
+                options.AllowSynchronousIO = true;
+            });
+
+            services.ConfigureLogs(Configuration, Environment);
+            services.ConfigureDataContext(Configuration, Environment);
+
+            services.AddSwaggerGen();
+
+            services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
             services.AddRazorPages();
             services.AddMvc();
 
-            services.AddControllers();
-            services.AddSwaggerGen();
-
             // Inject dependencies
 
-            services.AddDbContext<DataContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-
-            services.TryAddScoped<ICsvProvider, CsvProvider>();
-            services.TryAddScoped<IListingService, ListingService>();
+            services.ConfigureDependencies(Configuration, Environment);
+            services.ConfigureCache(Configuration, Environment);
+            services.RegisterAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

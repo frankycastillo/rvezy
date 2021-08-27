@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using rvezy.Data;
 
 namespace rvezy.Models
 {
-      public class Listing
+    [Table("Listing")]
+    public class Listing : BaseModel
     {
-        [Key]
-        public int id { get; set; }
         public string listing_url { get; set; }
         public string scrape_id { get; set; }
         public string last_scraped { get; set; }

@@ -1,14 +1,20 @@
 using System;
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using rvezy.Data;
 
 namespace rvezy.Models
 {
-    public class Calendar
+    [Table("Calendar")]
+    public class Calendar : BaseModel
     {
-        [Key]
-        public int listing_id { get; set; }
-        public DateTime date { get; set; }
-        public bool available { get; set; }
-        public Double price { get; set; }
+        [ForeignKey("Listing")]
+        public Guid ListingId { get; set; }
+
+        [NotMapped]
+        public Listing Listing { get; set; }
+
+        public DateTime EntryDate { get; set; }
+        public bool Available { get; set; }
+        public double Price { get; set; }
     }
 }
